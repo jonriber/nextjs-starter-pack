@@ -15,11 +15,13 @@ running the code:
 
     npx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example" --use-pnpm
 
-This templates is an already on-going project, so, this means that the main purpose of it is to learn all next.js main features without having to write all the application code.
+This templates is an already on-going project, so, this means that the main purpose of it is to learn all next.js main 
+features without having to write all the application code.
 
 ### project structure
 
-Before advancing to the actual development and coding phase, I need to spend some time to learn about project structure, because it has changed from src structure to app structure (latest next.js versions).
+Before advancing to the actual development and coding phase, I need to spend some time to learn about project structure, 
+because it has changed from src structure to app structure (latest next.js versions).
 
 #### App
 
@@ -31,7 +33,8 @@ Contains functions used in your application, such as reusable utility functions 
 
 #### App/ui
 
-Contains all the UI components for your application, such as cards, tables, and forms. To save time, we've pre-styled these components for you.
+Contains all the UI components for your application, such as cards, tables, and forms. To save time, we've pre-styled 
+these components for you.
 
 #### public
 
@@ -39,7 +42,8 @@ Contains all the static assets for your application, such as images.
 
 #### Config files
 
-Notice config files such as next.config.js at the root of your application. Most of these files are created and pre-configured when you start a new project using create-next-app.
+Notice config files such as next.config.js at the root of your application. Most of these files are created and 
+pre-configured when you start a new project using create-next-app.
 
 ### placeholder data
 
@@ -88,9 +92,11 @@ Now, learning about different ways to style my `Next.js` application.
 
 ### Global styles
 
-Inside the folder `/app/ui` there is a file named `global.css`. This is where you add CSS rules to all application routes.
+Inside the folder `/app/ui` there is a file named `global.css`. This is where you add CSS rules to all application 
+routes.
 
-So, you can import this file into any component available on the app. But is a very good development practice to import this into a top-level component (entry point).
+So, you can import this file into any component available on the app. But is a very good development practice to import 
+this into a top-level component (entry point).
 
 Adding global styles to my application by importing this file on `/app/layout.tsx`.
 
@@ -108,9 +114,10 @@ Adding global styles to my application by importing this file on `/app/layout.ts
         );
     }
 
-#### Tailwind Tool
+### Tailwind Tool
 
-This is a css framework to speed up development process by allowing us to quickly write `utility classes` directly in TSX markup.
+This is a css framework to speed up development process by allowing us to quickly write `utility classes` directly in 
+TSX markup.
 
 It is almost the same way as using `bootstrap`, adding class names to an element.
 
@@ -118,5 +125,22 @@ It is almost the same way as using `bootstrap`, adding class names to an element
 
 IMPORTANT INFORMATION!!!
 
-When using boilerplate tool to create new next.js projects using `create-next-app`, it will ask us about Tailwind usage. If `yes` is selected, Next.js will automatically install all necessary packages and deal with configuration file in our application.
+When using boilerplate tool to create new next.js projects using `create-next-app`, it will ask us about Tailwind usage. 
+If `yes` is selected, Next.js will automatically install all necessary packages and deal with configuration file in our 
+application.
+
+
+### CSS Modules
+
+Using this method, we are able to scope css to a component by automatically creating unique class names.
+
+We could achieve the same results as tailwind, by just creating `module.css` files.
+
+The benefits of using css modules are:
+
+- adding custom styles locally
+- even if project already uses tailwind, we can combine both ways without conflicts
+
+### CLSX library
+
 
