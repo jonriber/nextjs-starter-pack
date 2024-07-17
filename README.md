@@ -107,3 +107,16 @@ Adding global styles to my application by importing this file on `/app/layout.ts
             </html>
         );
     }
+
+#### Tailwind Tool
+
+This is a css framework to speed up development process by allowing us to quickly write `utility classes` directly in TSX markup.
+
+It is almost the same way as using `bootstrap`, adding class names to an element.
+
+    <h1 className="text-blue-500">I'm blue!</h1>
+
+IMPORTANT INFORMATION!!!
+
+When using boilerplate tool to create new next.js projects using `create-next-app`, it will ask us about Tailwind usage. If `yes` is selected, Next.js will automatically install all necessary packages and deal with configuration file in our application.
+
