@@ -82,3 +82,28 @@ Then, to start development server on port 3000 (default port):
 
     pnpm dev
 
+## CSS styling
+
+Now, learning about different ways to style my `Next.js` application.
+
+### Global styles
+
+Inside the folder `/app/ui` there is a file named `global.css`. This is where you add CSS rules to all application routes.
+
+So, you can import this file into any component available on the app. But is a very good development practice to import this into a top-level component (entry point).
+
+Adding global styles to my application by importing this file on `/app/layout.tsx`.
+
+    import '@/app/ui/global.css';
+ 
+    export default function RootLayout({
+        children,
+    }: {
+        children: React.ReactNode;
+    }) {
+        return (
+            <html lang="en">
+            <body>{children}</body>
+            </html>
+        );
+    }
