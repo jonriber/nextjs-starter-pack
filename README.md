@@ -10,7 +10,7 @@ following along next js documentation as a study purpose as a quick way to start
 installing pnpm:
 
     npm install -g pnpm
-    
+
 running the code:
 
     npx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example" --use-pnpm
@@ -40,3 +40,45 @@ Contains all the static assets for your application, such as images.
 #### Config files
 
 Notice config files such as next.config.js at the root of your application. Most of these files are created and pre-configured when you start a new project using create-next-app.
+
+### placeholder data
+
+When build user interfaces, it helps and it is a very good development practice to have placeholder data or mock data.
+
+Usually, when a database or API is not yet available.
+
+
+### TypeScript
+
+Typescript usage on this project reflects the modern web development landscape.
+
+It is a javascript extension, adding typing into development.
+
+here it is a good example of it:
+
+    export type Invoice = {
+        id: string;
+        customer_id: string;
+        amount: number;
+        date: string;
+        // In TypeScript, this is called a string union type.
+        // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
+        status: 'pending' | 'paid';
+        };
+
+So, typescript usage ensure we don´t accidentally pass the wrong data format to react components or database entity. One example:
+
+- passing a `string` instead of a `number` to invoice `amount`
+
+### Running development server
+
+Like `npm`, `pnpm` is used to install project dependencies.
+
+Continuing on `nextjs-dashboard` folder, where package file is at, run:
+
+    pnpm i
+
+Then, to start development server on port 3000 (default port):
+
+    pnpm dev
+
