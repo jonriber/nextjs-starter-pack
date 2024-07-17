@@ -15,3 +15,5 @@ running the code:
 
 This templates is an already on-going project, so, this means that the main purpose of it is to learn all next.js main features without having to write all the application code.
 
+### project structure
+
